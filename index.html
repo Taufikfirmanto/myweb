@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>MyWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">MyWeb</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="menu" id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1 id="judul"> Welcome Engineering Mixing </h1>
+
+    <img src="c:\Users\TAUFIK FIRMANTO\Downloads\WhatsApp Image 2026-01-29 at 13.22.51.jpeg" class="gambar">
+
+    <div class="login-box" id="loginBox">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="hasil"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
