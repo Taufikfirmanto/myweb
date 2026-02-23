@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>MyWeb</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyWeb</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo">MyWeb</div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <ul class="menu" id="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#" onclick="logout()">Logout</a></li>
-    </ul>
+  <div class="logo">MyWeb</div>
+  <ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#fitur">Fitur</a></li>
+    <li><button class="btn-login" onclick="openLogin()">Login</button></li>
+  </ul>
 </nav>
 
-<div class="container">
-    <h1 id="judul"> Welcome Engineering Mixing </h1>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Bangun Website Modern</h1>
+    <p>Belajar web dari nol sampai online & profesional</p>
+    <button class="btn-primary">Mulai Sekarang</button>
+  </div>
+  <img src="gambar.jpg" class="hero-img">
+</section>
 
-    <img src="gambar1.jpeg" class="gambar">
+<section class="fitur" id="fitur">
+  <h2>Fitur Unggulan</h2>
+  <div class="cards">
+    <div class="card">⚡ Cepat</div>
+    <div class="card">🎨 Modern</div>
+    <div class="card">🌍 Online</div>
+  </div>
+</section>
 
-    <div class="login-box" id="loginBox">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
-        <p id="hasil"></p>
-    </div>
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="hasil"></p>
+    <span class="close" onclick="closeLogin()">×</span>
+  </div>
 </div>
 
 <script src="script.js"></script>
